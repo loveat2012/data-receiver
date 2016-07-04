@@ -1,0 +1,13 @@
+[file_queue]
+
+# the path of queue file
+queue_file=/tmp/c-file-queue
+
+# listen port
+listen_port=8000
+
+# the path of log file
+log_file=/tmp/c-file-queue.log
+
+# the path of error log
+error_log_file=/tmp/c-file-queue.error.log
