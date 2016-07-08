@@ -1,6 +1,11 @@
 #include "fcntl.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/fcntl.h>
 
-int is_file_exist(const char *file) {
+
+int is_file_exist(const char *file)
+{
     if (file == NULL) {
         return -1;
     }

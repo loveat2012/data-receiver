@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #define MAX_PATHNAME_LENGTH 256
 
 int is_file_exist(const char *file);

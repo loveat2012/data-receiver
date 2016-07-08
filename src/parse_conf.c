@@ -1,4 +1,8 @@
+#include <stdio.h>
+#include <memory.h>
+#include <stdlib.h>
 #include "parse_conf.h"
+
 
 int get_profile_conf(const char *conf_file, const char *profile, const char *key, char *value)
 {

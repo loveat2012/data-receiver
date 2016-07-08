@@ -1,4 +1,11 @@
+#include "global.h"
+#include "time.h"
+#include "fcntl.h"
 #include "log.h"
+
+
+char log_file[KEYLEN];
+char error_log_file[KEYLEN];
 
 void write_log(const char *filename, const char *msg)
 {
@@ -6,7 +13,7 @@ void write_log(const char *filename, const char *msg)
     fp = fopen(filename, "a+");
     if (fp != NULL) {
         int lfmsg_len = strlen(msg) + 24;
-        char *lfmsg = (char*) malloc(lfmsg_len);
+        char *lfmsg = (char *) malloc(lfmsg_len);
         if (lfmsg != NULL) {
             memset(lfmsg, 0, sizeof(*lfmsg));
             char time_string[23];

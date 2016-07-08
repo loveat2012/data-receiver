@@ -1,3 +1,9 @@
+## 2016-07-08
+
+### =Change
+* version 0.1.0 release.
+
+
 ## 2016-07-04
 
 ### +Added

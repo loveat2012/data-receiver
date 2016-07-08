@@ -1,4 +1,7 @@
+#include <ctype.h>
+#include <string.h>
 #include "string.h"
+
 
 char *ltrim(char *string)
 {

@@ -1,1 +1,13 @@
+*.o
+.deps
+Makefile*
+utils/compile
+utils/depcomp
+utils/install-sh
+utils/missing
+aclocal.m4
+autom4te.cache/
+config.h.in
+configure
 .idea
+CMakeLists.txt

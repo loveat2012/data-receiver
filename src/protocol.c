@@ -1,11 +1,16 @@
-#include <sys/wait.h>
-#include <stdlib.h>
-#include <memory.h>
+#include <unistd.h>
+#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <signal.h>
+#include "global.h"
+#include "fcntl.h"
 #include "protocol.h"
-#include "daemonize.c"
+#include "daemonize.h"
 #include "log.h"
+
+
+char queue_file[KEYLEN];
+char listen_port[32];
 
 void receive_callback(char *ptr, size_t size, int client_socket)
 {

@@ -1,6 +1,11 @@
+#include <string.h>
+#include <sys/stat.h>
+#include <errno.h>
 #include "dir.h"
 
-int is_dir_exist(const char *path) {
+
+int is_dir_exist(const char *path)
+{
     return is_file_exist(path);
 }
 
