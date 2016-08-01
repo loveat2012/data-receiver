@@ -1,7 +1,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include "dir.h"
+#include "fcntl.h"
 
 
 int is_dir_exist(const char *path)

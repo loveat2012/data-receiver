@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <memory.h>
 #include <stdlib.h>
+#include "global.h"
 #include "parse_conf.h"
 
 

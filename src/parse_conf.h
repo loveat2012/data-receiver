@@ -1,5 +1,4 @@
-#include "global.h"
-#include "string.h"
+#include "str.h"
 
 
 #define LINESIZE 1024

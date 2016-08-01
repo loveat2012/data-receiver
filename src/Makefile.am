@@ -10,14 +10,14 @@ bin_PROGRAMS         = datarecevier
 
 datarecevier_SOURCES =    \
 global.h                  \
-string.c     string.h     \
+str.c        str.h        \
 fcntl.c      fcntl.h      \
 dir.c        dir.h        \
 parse_conf.c parse_conf.h \
 daemonize.c  daemonize.h  \
-time.c       time.h       \
+timer.c      timer.h       \
 log.c        log.h        \
-protocol.c   protocol.h   \
+communicate.c   communicate.h   \
 init.c       init.h       \
 main.c       setup.h
 

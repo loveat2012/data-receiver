@@ -1,11 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "global.h"
-#include "time.h"
+#include "timer.h"
 #include "fcntl.h"
-#include "log.h"
 
-
-char log_file[KEYLEN];
-char error_log_file[KEYLEN];
 
 void write_log(const char *filename, const char *msg)
 {
@@ -21,11 +20,16 @@ void write_log(const char *filename, const char *msg)
             strcat(time_string, " : ");
             strcat(lfmsg, time_string);
             strcat(lfmsg, msg);
-            lfmsg[lfmsg_len - 1] = '\n';
-            write_file_with_lock(fp, lfmsg, lfmsg_len);
+            lfmsg[lfmsg_len - 2] = '\n';
+            write_file_with_lock(fp, lfmsg, lfmsg_len - 1);
             free(lfmsg);
+            fclose(fp);
+        } else {
+            fclose(fp);
+            perror("Can't allocate LF msg memory");
         }
-        fclose(fp);
+    } else {
+        perror("Can't open file");
     }
 }
 

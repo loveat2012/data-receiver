@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <libgen.h>
-#include "init.h"
+#include "global.h"
+#include "fcntl.h"
+#include "dir.h"
 
 
 char queue_file[KEYLEN];
@@ -13,7 +15,7 @@ int get_profile_conf(const char *conf_file, const char *profile, const char *key
 
 void try_do_mkdir(const char *dir, const char *errmsg)
 {
-    if (is_dir_exist(dir)) {
+    if (is_dir_exist(dir) != 0) {
         if (mkdirs(dir) == -1) {
             perror(errmsg);
             exit(-1);

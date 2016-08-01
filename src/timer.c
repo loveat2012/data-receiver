@@ -1,6 +1,7 @@
+#include <stdio.h>
 #include <ntsid.h>
 #include <time.h>
-#include "time.h"
+#include <string.h>
 
 
 void get_time_string(char *time_string)

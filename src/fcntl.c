@@ -1,5 +1,4 @@
 #include "fcntl.h"
-#include <stdio.h>
 #include <unistd.h>
 #include <sys/fcntl.h>
 
@@ -17,5 +16,4 @@ void write_file_with_lock(FILE *fp, const void *ptr, size_t size)
     flock((int) fp, LOCK_EX);
     fwrite(ptr, size, 1, fp);
     flock((int) fp, LOCK_UN);
-    fclose(fp);
 }

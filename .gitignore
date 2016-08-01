@@ -7,7 +7,12 @@ utils/install-sh
 utils/missing
 aclocal.m4
 autom4te.cache/
+config.h
+config.log
+config.status
 config.h.in
 configure
+src/datarecevier
 .idea
 CMakeLists.txt
+.project

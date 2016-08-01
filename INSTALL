@@ -1,0 +1,6 @@
+INSTALLATION PROCEDURE
+
+NOTE: The bootstrap requires GNU autotools in order to run.
+
+shell> ./utils/bootstrap.sh
+shell> ./configure

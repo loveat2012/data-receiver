@@ -1,7 +1,8 @@
 #include <getopt.h>
 #include <stdio.h>
 #include "init.h"
-#include "protocol.h"
+#include "communicate.h"
+#include "log.h"
 #include "setup.h"
 
 
@@ -37,7 +38,15 @@ int main(int argc, char *argv[])
     }
 
     init_global(conf_file);
+
+    if (do_daemonize == 1) {
+        log_info("start in daemon mode.");
+    } else {
+        log_info("start in debug mode.");
+    }
+
     communication(receive_callback);
+
     return 0;
 }
 
